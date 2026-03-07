@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Formulaire</title>
+</head>
+<body>
+    <header>
+        <h1 id="title">Carnet d'Évasion</h1>
+        <nav>
+            <ul id="navbar">
+                <li><a href="index.html" class="page_link">Accueil</a></li>
+                <li><a href="article.html" class="page_link">Articles</a></li>
+                <li><a href="#" class="page_link active_page">Formulaire</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <form action="#" method="post">
+            <label for="titre">Titre :</label><br>
+            <input type="text" id="titre" name="titre" required class="input_form"><br>
+
+            <label for="auteur">Auteur :</label><br>
+            <input type="text" id="auteur" name="auteur" class="input_form"><br>
+
+            <label for="categorie">Catégorie :</label><br>
+            <select id="categorie" name="categorie">
+                <option value="ville">Ville</option>
+                <option value="nature">Nature</option>
+                <option value="culture">Culture</option>
+            </select><br>
+
+            <label for="contenu">Contenu :</label><br>
+            <textarea id="contenu" name="contenu" rows="6" cols="40" required class="input_form"></textarea><br>
+
+            <label for="image">Image :</label><br>
+            <input type="file" id="image" name="image" class="input_form"><br>
+
+            <button type="submit" class="lire_la_suite">Publier</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2026 Carnet d'Évasion, tous droits reserves.</p>
+    </footer>
+</body>
+</html>
