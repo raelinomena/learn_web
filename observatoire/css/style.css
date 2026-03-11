@@ -1,0 +1,367 @@
+/* ================================================
+   L'Observatoire — style.css
+   Thème : nuit étoilée / astronomie
+   ================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap');
+
+/* -- Reset de base -- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #0b0e1a;
+    color: #ddd8cc;
+}
+
+/* ================================================
+   HEADER
+   ================================================ */
+
+header {
+    background-color: #07090f;
+    border-bottom: 1px solid rgba(201, 168, 76, 0.2);
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+#title {
+    margin-bottom: 15px;
+    text-align: center;
+    color: #ddd8cc;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+}
+
+#navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+.page_link {
+    text-decoration: none;
+    color: #7a7570;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    transition: color 0.3s ease;
+}
+
+.page_link:hover, .active_page {
+    color: #c9a84c;
+}
+
+/* ================================================
+   HERO (page d'accueil)
+   ================================================ */
+
+#hero {
+    background-color: #0d1120;
+    background-image: url('https://images.unsplash.com/photo-1506443432602-ac2fcd6f54e0?w=1400&q=50');
+    background-size: cover;
+    background-position: center;
+    padding: 80px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#hero_label {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #c9a84c;
+    margin-bottom: 15px;
+}
+
+#hero_title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #ddd8cc;
+    margin-bottom: 15px;
+}
+
+#hero_title em {
+    color: #c9a84c;
+    font-style: italic;
+}
+
+#hero_sub {
+    color: #7a7570;
+    font-size: 1rem;
+    max-width: 450px;
+}
+
+/* ================================================
+   GRILLE D'ARTICLES (page d'accueil)
+   ================================================ */
+
+main {
+    flex: 1;
+    padding: 40px 20px;
+}
+
+#articles {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+@media (min-width: 600px) {
+    #articles {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    #articles {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.extrait_article {
+    padding: 20px;
+    border: 1px solid rgba(201, 168, 76, 0.15);
+    border-radius: 10px;
+    background-color: #111827;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.extrait_article:hover {
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.6);
+    transform: translateY(-4px);
+}
+
+.extrait_article h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #ddd8cc;
+    margin-bottom: 8px;
+    line-height: 1.35;
+}
+
+.extrait_article time {
+    display: block;
+    font-size: 0.8rem;
+    color: #4a4840;
+    margin-bottom: 10px;
+}
+
+.extrait_article p {
+    font-size: 0.9rem;
+    color: #7a7570;
+    line-height: 1.7;
+}
+
+.lire_la_suite {
+    text-decoration: none;
+    color: #c9a84c;
+    border: 1px solid rgba(201, 168, 76, 0.35);
+    border-radius: 5px;
+    padding: 2px 8px;
+    font-size: 0.85rem;
+    transition: color 0.2s, background-color 0.2s;
+}
+
+.lire_la_suite:hover {
+    color: #0b0e1a;
+    background-color: #c9a84c;
+}
+
+/* ================================================
+   PAGE ARTICLE
+   ================================================ */
+
+.main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#main_article {
+    max-width: 800px;
+    line-height: 30px;
+    padding: 40px 20px;
+}
+
+#main_article h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: #ddd8cc;
+    margin-bottom: 8px;
+    line-height: 1.2;
+}
+
+#main_article time {
+    display: block;
+    font-size: 0.85rem;
+    color: #4a4840;
+    margin-bottom: 20px;
+}
+
+#article_img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    margin-top: 10px;
+}
+
+#main_article p {
+    color: #9a9488;
+    font-size: 1rem;
+    line-height: 1.85;
+    margin-bottom: 15px;
+}
+
+#main_article em {
+    color: #e2c97e;
+    font-style: italic;
+}
+
+#main_article h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #e2c97e;
+    margin: 25px 0 12px;
+}
+
+#main_article ul {
+    list-style: none;
+    background-color: #111827;
+    border: 1px solid rgba(201, 168, 76, 0.15);
+    border-radius: 8px;
+    padding: 20px 25px;
+    margin-bottom: 25px;
+}
+
+#main_article ul li {
+    font-size: 0.95rem;
+    color: #9a9488;
+    padding-left: 20px;
+    margin-bottom: 8px;
+    position: relative;
+}
+
+#main_article ul li::before {
+    content: '✦';
+    position: absolute;
+    left: 0;
+    color: #c9a84c;
+    font-size: 0.5rem;
+    top: 6px;
+}
+
+#main_article a {
+    display: inline-block;
+    color: #7a7570;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: color 0.2s;
+}
+
+#main_article a:hover {
+    color: #c9a84c;
+}
+
+/* ================================================
+   PAGE FORMULAIRE
+   ================================================ */
+
+form {
+    max-width: 650px;
+    width: 100%;
+    padding: 40px 20px;
+}
+
+#form_title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 400;
+    color: #ddd8cc;
+    margin-bottom: 8px;
+}
+
+#form_intro {
+    color: #7a7570;
+    margin-bottom: 30px;
+    font-size: 0.95rem;
+}
+
+form label {
+    display: block;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #7a7570;
+    margin-top: 5px;
+}
+
+.input_form {
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    margin-top: 8px;
+    border: 1px solid rgba(201, 168, 76, 0.15);
+    border-radius: 8px;
+    background-color: #111827;
+    color: #ddd8cc;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    width: 100%;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+}
+
+.input_form::placeholder {
+    color: #3a3830;
+}
+
+.input_form:focus {
+    border-color: #c9a84c;
+    box-shadow: 0px 0px 8px rgba(201, 168, 76, 0.25);
+}
+
+#form_note {
+    font-size: 0.78rem;
+    color: #4a4840;
+    margin-bottom: 20px;
+}
+
+/* ================================================
+   FOOTER
+   ================================================ */
+
+footer {
+    background-color: #07090f;
+    border-top: 1px solid rgba(201, 168, 76, 0.15);
+    padding: 20px;
+    text-align: center;
+    color: #4a4840;
+    font-size: 0.85rem;
+}
