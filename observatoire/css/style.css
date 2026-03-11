@@ -19,8 +19,8 @@ body {
     flex-direction: column;
     min-height: 100vh;
     margin: 0;
-    background-color: #0b0e1a;
-    color: #ddd8cc;
+    background-color: #111520;  /* légèrement plus clair */
+    color: #eae6da;             /* texte principal plus blanc */
 }
 
 /* ================================================
@@ -28,8 +28,8 @@ body {
    ================================================ */
 
 header {
-    background-color: #07090f;
-    border-bottom: 1px solid rgba(201, 168, 76, 0.2);
+    background-color: #0d1020;  /* un peu plus clair que le noir pur */
+    border-bottom: 1px solid rgba(201, 168, 76, 0.3);
     padding: 20px;
     position: sticky;
     top: 0;
@@ -55,7 +55,7 @@ header {
 
 .page_link {
     text-decoration: none;
-    color: #7a7570;
+    color: #a09890;             /* bien plus lisible */
     text-transform: uppercase;
     font-size: 0.85rem;
     letter-spacing: 0.08em;
@@ -104,7 +104,7 @@ header {
 }
 
 #hero_sub {
-    color: #7a7570;
+    color: #a09890;             /* lisible sur fond image sombre */
     font-size: 1rem;
     max-width: 450px;
 }
@@ -140,9 +140,9 @@ main {
 
 .extrait_article {
     padding: 20px;
-    border: 1px solid rgba(201, 168, 76, 0.15);
+    border: 1px solid rgba(201, 168, 76, 0.25);
     border-radius: 10px;
-    background-color: #111827;
+    background-color: #192033;  /* plus clair, meilleur contraste avec le fond */
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
@@ -156,7 +156,7 @@ main {
     font-family: 'Playfair Display', serif;
     font-size: 1.1rem;
     font-weight: 400;
-    color: #ddd8cc;
+    color: #eae6da;             /* titre bien visible */
     margin-bottom: 8px;
     line-height: 1.35;
 }
@@ -164,13 +164,13 @@ main {
 .extrait_article time {
     display: block;
     font-size: 0.8rem;
-    color: #4a4840;
+    color: #7a7870;             /* date lisible, pas invisible */
     margin-bottom: 10px;
 }
 
 .extrait_article p {
     font-size: 0.9rem;
-    color: #7a7570;
+    color: #a09890;             /* texte résumé clair */
     line-height: 1.7;
 }
 
@@ -217,7 +217,7 @@ main {
 #main_article time {
     display: block;
     font-size: 0.85rem;
-    color: #4a4840;
+    color: #7a7870;             /* date lisible */
     margin-bottom: 20px;
 }
 
@@ -230,7 +230,7 @@ main {
 }
 
 #main_article p {
-    color: #9a9488;
+    color: #b8b2a8;             /* texte long bien lisible */
     font-size: 1rem;
     line-height: 1.85;
     margin-bottom: 15px;
@@ -251,8 +251,8 @@ main {
 
 #main_article ul {
     list-style: none;
-    background-color: #111827;
-    border: 1px solid rgba(201, 168, 76, 0.15);
+    background-color: #192033;  /* plus clair que le fond */
+    border: 1px solid rgba(201, 168, 76, 0.25);
     border-radius: 8px;
     padding: 20px 25px;
     margin-bottom: 25px;
@@ -260,7 +260,7 @@ main {
 
 #main_article ul li {
     font-size: 0.95rem;
-    color: #9a9488;
+    color: #b8b2a8;             /* texte lisible */
     padding-left: 20px;
     margin-bottom: 8px;
     position: relative;
@@ -277,7 +277,7 @@ main {
 
 #main_article a {
     display: inline-block;
-    color: #7a7570;
+    color: #a09890;             /* lien retour visible */
     font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 0.06em;
@@ -309,7 +309,7 @@ form {
 }
 
 #form_intro {
-    color: #7a7570;
+    color: #a09890;             /* lisible */
     margin-bottom: 30px;
     font-size: 0.95rem;
 }
@@ -319,7 +319,7 @@ form label {
     font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    color: #7a7570;
+    color: #a09890;             /* labels visibles */
     margin-top: 5px;
 }
 
@@ -327,10 +327,10 @@ form label {
     padding: 12px 15px;
     margin-bottom: 20px;
     margin-top: 8px;
-    border: 1px solid rgba(201, 168, 76, 0.15);
+    border: 1px solid rgba(201, 168, 76, 0.25);
     border-radius: 8px;
-    background-color: #111827;
-    color: #ddd8cc;
+    background-color: #192033;  /* plus clair, contraste avec le texte */
+    color: #eae6da;
     font-family: 'Inter', sans-serif;
     font-size: 0.95rem;
     width: 100%;
@@ -339,7 +339,7 @@ form label {
 }
 
 .input_form::placeholder {
-    color: #3a3830;
+    color: #5a5650;             /* placeholder visible mais discret */
 }
 
 .input_form:focus {
@@ -349,7 +349,7 @@ form label {
 
 #form_note {
     font-size: 0.78rem;
-    color: #4a4840;
+    color: #7a7870;             /* note visible */
     margin-bottom: 20px;
 }
 
@@ -358,10 +358,10 @@ form label {
    ================================================ */
 
 footer {
-    background-color: #07090f;
-    border-top: 1px solid rgba(201, 168, 76, 0.15);
+    background-color: #0d1020;
+    border-top: 1px solid rgba(201, 168, 76, 0.2);
     padding: 20px;
     text-align: center;
-    color: #4a4840;
+    color: #7a7870;             /* copyright lisible */
     font-size: 0.85rem;
 }
